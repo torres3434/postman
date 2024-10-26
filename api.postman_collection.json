@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "3a019f71-662b-4292-b16c-1c987220a336",
+		"name": "api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39127399"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://library.demo.local/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"library",
+						"demo",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				},
+				"description": "etfdfg"
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Cisco123!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://library.demo.local/api/v1/loginViaBasic",
+					"protocol": "http",
+					"host": [
+						"library",
+						"demo",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loginViaBasic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post2",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "cisco|4TykzlGgkP7cvfduSWuhUoEx5iYgfxN9LNpVmGgmoTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 4,\n  \"title\": \"IPv6 Fundamentals\",\n  \"author\": \"Rick Graziani\",\n  \"isbn\": \"978 158144778\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://library.demo.local/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"library",
+						"demo",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
